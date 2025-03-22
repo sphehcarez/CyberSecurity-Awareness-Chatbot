@@ -1,12 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Speech.Synthesis;
+using System.Threading;
+using CyberSecurity_Awareness_chatbot;
 
-namespace CyberSecurity_Awareness_chatbot
+class Utils
 {
-    internal class Utils
+    public static void PrintWithColor(string message, ConsoleColor color)
     {
+        Console.ForegroundColor = color;
+        Console.WriteLine(message);
+        Console.ResetColor();
+    }
+
+    public static void TypingEffect(string message)
+    {
+        foreach (char c in message)
+        {
+            Console.Write(c);
+            Thread.Sleep(50);
+        }
+        Console.WriteLine();
     }
 }
