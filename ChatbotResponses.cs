@@ -12,6 +12,11 @@ class ChatbotResponses
             case "phishing scams":
                 Utils.TypingEffect("Be careful of suspicious emails. Don't click unknown links.");
                 break;
+
+            case "safe browsing":
+                Utils.TypingEffect("Always check website URLs and ensure HTTPS encryption.");
+                break;
+
             default:
                 Utils.TypingEffect("I'm not sure about that. Try 'password tips' or 'phishing scams'.");
                 break;
